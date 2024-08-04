@@ -1,0 +1,59 @@
+@import './tailwind.css';
+
+/* Custom styles here */
+@layer base {
+   body {
+      @apply font-golos text-black bg-white;
+   }
+}
+
+@layer components {
+   .wrapper {
+      @apply container mx-auto px-4 max-w-[1440px];
+   }
+}
+
+* {
+   @apply box-border m-0 p-0 font-inherit text-inherit;
+}
+
+*::-webkit-scrollbar {
+   width: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+   background-color: #089e5f;
+   border-radius: 10px;
+}
+
+.fade-transform-enter-active,
+.fade-transform-leave-active {
+   transition: opacity 0.3s, transform 0.3s;
+}
+
+.fade-transform-enter-from,
+.fade-transform-leave-to {
+   opacity: 0;
+   transform: translateY(-20px);
+}
+
+.fade-transform-enter-to,
+.fade-transform-leave-from {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+   transition: opacity 0.3s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+   opacity: 0;
+}
+
+.fade-enter-to,
+.fade-leave-from {
+   opacity: 1;
+}
